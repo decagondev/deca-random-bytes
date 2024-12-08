@@ -1,4 +1,4 @@
-# 🎲 Deca Random Bytes
+# 🎲 Deca Random Data
 
 A comprehensive, cryptographically secure random byte and number generator with multiple encoding support. 🔐🚀
 
@@ -13,13 +13,13 @@ A comprehensive, cryptographically secure random byte and number generator with 
 ## 📦 Installation
 
 ```bash
-npm install deca-random-bytes
+npm install deca-random-data
 ```
 
 ## 📂 Project Structure
 
 ```
-deca-random-bytes/
+deca-random-data/
 │
 ├── src/
 │   └── index.ts         # Main source file
@@ -41,7 +41,7 @@ deca-random-bytes/
 ### Random Byte Generation
 
 ```javascript
-import { decaRandomBytes } from 'deca-random-bytes';
+import { decaRandomBytes } from 'deca-random-data';
 
 // Generate 16 random bytes in hex (default)
 const hexToken = decaRandomBytes(16);
@@ -54,7 +54,7 @@ const utf8Token = decaRandomBytes(16, 'utf8');
 ### Multiple Random Byte Generation
 
 ```javascript
-import { decaMultiRandomBytes } from 'deca-random-bytes';
+import { decaMultiRandomBytes } from 'deca-random-data';
 
 const tokens = decaMultiRandomBytes({
   apiToken: { bytes: 16, encoding: 'hex' },
@@ -70,7 +70,7 @@ console.log(tokens.sessionKey);   // Base64-encoded random bytes
 ### Random Integer Generation
 
 ```javascript
-import { decaRandomInt } from 'deca-random-bytes';
+import { decaRandomInt } from 'deca-random-data';
 
 // Generate a random integer between 1 and 100 (inclusive)
 const randomNumber = decaRandomInt(1, 100);

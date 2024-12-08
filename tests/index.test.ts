@@ -1,7 +1,7 @@
 import { decaRandomBytes, decaMultiRandomBytes, decaRandomInt } from '../src/index';
 
 describe('Deca Random Bytes', () => {
-  const encodings = ['hex', 'base64', 'utf8', 'ascii', 'base64url'] as const;
+  const encodings = ['hex', 'base64', 'utf8', 'ascii', 'base64url'];
 
   test.each(encodings)('should generate %s encoded random bytes', (encoding) => {
     const bytes = 16;
@@ -38,7 +38,7 @@ describe('Deca Random Bytes', () => {
 
   it('should throw error in unsupported environment', () => {
     const originalCrypto = global.crypto;
-    global.crypto = undefined as any;
+    global.crypto = undefined;
 
     expect(() => decaRandomBytes(16)).toThrow('No cryptographically secure random number generator available');
     expect(() => decaRandomInt(1, 100)).toThrow('No cryptographically secure random number generator available');
